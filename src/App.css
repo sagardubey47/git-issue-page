@@ -1,38 +1,252 @@
-.App {
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.error {
+  width: 400px;
+  margin: 20px auto;
+  color: #e96161;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.user-info {
+  width: 300px;
+  margin: 100px auto;
+  text-align: left;
+  font-size: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.user-info input {
+  width: 200px;
+  float: right;
+  padding: 2px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.user-info button {
+  margin: 5px;
+  padding: 5px 12px;
+  border-radius: 7px;
+  background-color: #8695f0;
+  border: solid 2px #4955a3;
+  float: right;
+}
+
+.user-info button:hover {
+  background-color: #272c4d;
+  border: solid 2px #6971a3;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.header {
+  display: flex;
+  width: 100%;
+  height: 50px;
+  background: #212121;
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.left-side {
+  flex: 0.8;
+  
+}
+
+.right-side {
+ flex: 0.2; 
+ align-self: flex-end;
+}
+
+.header img {
+  background-image: radial-gradient(circle, #ffffff, #ffffff, #ffffff, #474444, #0c0c0c, #181717, #1a1919);
+  border-radius: 50px;
+  border: none;
+  height: 50px;
+  margin: 0 10px;
+  padding: 0;
+  
+}
+
+.header input {
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  bottom: 15px;
+  padding: 5px;
+  width: 40%;
+  background-color: transparent;
+  border: solid 1px rgb(167, 164, 164); 
+  border-radius: 5px;
+}
+
+.header  p {
+  display: inline-block;
+  margin: 0 5px;
+   position: relative;
+   bottom: 15px;
+}
+
+.header p:hover {
+  color: rgb(148, 192, 177);
+}
+
+.header .right-side img {
+  height: 35px;
+  display: inline;
+}
+
+#plus {
+  font-size: 30px;
+  top: -12px;
+}
+
+#menu {
+  height: 100px;
+  background-color: rgb(244, 249, 250);
+  border-bottom: 1px solid rgb(197, 190, 190);
+  display: flex;
+  align-items: flex-end;
+}
+
+#menu div {
+  margin: 15px 15px 1px;
+  font-size: 18px;
+
+}
+
+.active {
+  padding-bottom: 2px;
+  border-bottom: 2px solid #e96161;
+}
+
+#menu img {
+  height: 16px;
+}
+
+.issuePage {
+  width: 85%;
+  margin: 10px auto;
+  background-color: #fdfefe;
+  border: solid 0.5px rgb(238, 234, 234);
+}
+
+.issuePage-default {
+  text-align: center;
+}
+
+.issuePage-default h5 {
+  padding: 10px;
+  letter-spacing: 2;
+}
+
+.issuePage-default p {
+  font-size: 14px;
+  padding: 10px;
+}
+
+.issuePage-default span {
+  background-color: rgb(115, 113, 235);
+  padding: 0px 5px;
+  border-radius: 10px;
+  color: white;
+  font-weight: 550;
+}
+
+.issuePage-filter-contain {
+   display: flex;
+   width: 85%;
+   margin: 10px auto;
+   justify-content: space-between;
+}
+
+.issuePage-filter {
+  width: 60%;
+}
+
+.issuePage-filter select, input {
+  background-color: transparent;
+  background-color: #f3f7f6e5;
+  border: solid 0.5px rgb(238, 234, 234);
+}
+
+.issuePage-filter select {
+  border-right: 1px solid #c7d1d3;
+  width: 15%;
+  font-size: 20px;
+  letter-spacing: 1.5px;
+  padding: 5px 10px;
+  border-radius: 8px 0px 0px 8px;
+}
+
+.issuePage-filter input {
+  width: 80%;
+  padding: 12px 10px 8px;
+   border-radius: 0px 8px 8px 0px;
+}  
+
+.issuePage-filter input:focus {
+  outline: none;
+  border: rgb(112, 162, 218) solid 2px;
+}
+
+.tokens {
+   line-height: 2;
+   border: solid 0.5px rgb(238, 234, 234);
+   padding: 5px 15px;
+   display:inline;
+}
+
+#label {
+   border-right:1px solid #c7d1d3;
+   border-radius: 8px 0px 0px 8px;
+}
+
+#milestone {
+   border-radius: 0px 8px 8px 0px;
+}
+
+#newIssue {
+  padding: 0px 10px;
+  background-color: rgb(83, 145, 83);
+  border-radius: 8px;
+  color: #ffffff;
+}
+
+.issuePage-main {
+ 
+  text-align: center;
+}
+
+.issuePage-main img {
+  margin-top: 50px;
+}
+
+.issuePage-main .block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f3f7f6e5;
+  height: 50px;
+  border-bottom: solid 1px #e1e2e2;
+}
+
+.issuePage-main .block input {
+  display: inline;
+  
+}
+
+.issuePage-main .block img {
+  margin: 0 10px;
+  height: 20px;
+  display: inline;
+}
+
+.issuePage-main .block p {
+  display: inline-block;
+}
+
+.selects select {
+   background-color: transparent;
+   border: none;
+   margin: 5px;
 }
